@@ -10,9 +10,13 @@ def home():
 
 # Routes anytime a user hits /welcome as a link to take them to the welcome page
 
-@app.route('/welcome')
-def welcome():
-    return render_template('welcome.html')
-    
+@app.route('/search')
+def search_user():
+    return render_template('search.html')
+
+@app.route('/check-in')
+def check_in():
+    return render_template('check-in.html')
+
 if __name__ == '__main__':
     app.run()
