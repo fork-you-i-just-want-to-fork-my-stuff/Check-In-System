@@ -1,0 +1,46 @@
+{% extends "template.html" %}
+{% block content %}
+<style>
+    h2{font-family: monospace; font-size: 50px;}
+</style>
+    <div class="jumbo">
+        <h2>Check-In</h2>
+		<form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Check-In</legend>
+
+<!-- Search input-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="searchinput">Client Name</label>
+  <div class="col-md-4">
+    <input id="searchinput" name="searchinput" type="search" placeholder="e.g John smith" class="form-control input-md" required="">
+    <p class="help-block">Enter client name here</p>
+  </div>
+</div>
+
+<!-- Select Basic -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="Haircut">Select Haircut client would like</label>
+  <div class="col-md-4">
+    <select id="Haircut" name="Haircut" class="form-control">
+      <option value="1">Regular Haircut</option>
+      <option value="2">Deluxe Haircut</option>
+      <option value="3">Dye</option>
+      <option value="4">Haircut w/Dye</option>
+      <option value="5">Deluxe Haircut w/Dye</option>
+      <option value="6">Trim</option>
+    </select>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+        <br/>
+        <p>click <a href="/check-in">here</a> to go to the check-in page</p>
+        <br/>
+        <p>click <a href="/search">here</a> to go to the search user page</p>
+    </div>
+{% endblock %}
