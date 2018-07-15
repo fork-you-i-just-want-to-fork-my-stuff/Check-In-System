@@ -6,3 +6,8 @@ WORKDIR /check-in
 
 # Add everytthing from working directory to install
 ADD . /check-in
+
+#Install Python Dependencies through pip
+RUN pip install --trusted-host pypi.python.org -r requirements.txt
+
+
