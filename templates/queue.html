@@ -1,0 +1,22 @@
+{% extends "template.html" %}
+{% block content %}
+<style>
+    h2{font-family: monospace; font-size: 50px;}
+</style>
+    <div class="jumbo">
+        <h2>QUEUE</h2>
+        <br/>
+            <ol>*Keep in mind waittimes are approximated
+                <li>James         Wait time: 2 min</li>
+                <li>Dianne        Wait time: 4 min</li>
+                <li>Mark          Wait time: 10 min</li>
+                <li>Linda         Wait time: 15 min</li>
+            </ol>
+        <br/>
+            <p>click <a href="/check-in">here</a> to go to the check-in page</p>
+        <br/>
+            <p>click <a href="/search">here</a> to go to the search user page</p>
+    </div>
+
+
+{% endblock %}
