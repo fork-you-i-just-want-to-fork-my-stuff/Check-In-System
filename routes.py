@@ -18,5 +18,9 @@ def search_user():
 def check_in():
     return render_template('check-in.html')
 
+@app.route('/queue')
+def queue():
+    return render_template('queue.html')
+
 if __name__ == '__main__':
     app.run()
