@@ -8,13 +8,16 @@
             <br/>
         <h4>Enter Credentials below</h4>
             <div>
-        
                 <!-- Where all of the search information would go-->
                 {% for client in clients %} 
-                <p>Name: {{ client.client_name }}  Haircut preference: {{ client.haircut_pref }}</p>
+                <p>Name: {{ client.client_name }}  <br/>Phone number: {{ client.phone_number }}  <br/>Postal Code: {{ client.postal_code }} <br/>Email: {{ client.email }}</p>
 
                 {% endfor %}
             </div>
+        <br/>
+        <p>click <a href="/check-in">here</a> to go to the check-in page</p>
+        <br/>
+        <p>click <a href="/search">here</a> to go to the search user page</p>
         <br/>
         <p>click <a href="/">here</a> to go to the home page</p>
     </div>

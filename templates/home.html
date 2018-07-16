@@ -42,6 +42,11 @@ background: #141414;
         background-attachment: scroll;
     }
 }
+    
+        #site-footer {
+            height: 50px;
+            background: #141414;
+            }    
 </style>
 <body>
 
@@ -54,16 +59,15 @@ background: #141414;
     <a href="/" class="w3-bar-item w3-button">Home</a>
     <a href="/login" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Login</a>
     <a href="/check-in" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Check-in</a>
-    <a href="/queue" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> Queue</a>
     <a href="/search" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Search</a>
     </a>
   </div>
 
   <!-- Navbar on small screens -->
   <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="/login" class="w3-bar-item w3-button"><i class="toggleFunction()"></i> Login</a>  
     <a href="/home" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
     <a href="/check-in" class="w3-bar-item w3-button" onclick="toggleFunction()">Check-in</a>
-    <a href="/queue" class="w3-bar-item w3-button" onclick="toggleFunction()">Queue</a>
     <a href="/search" class="w3-bar-item w3-button">Search</a>
   </div>
 </div>
