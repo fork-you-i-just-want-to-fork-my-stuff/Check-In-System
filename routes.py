@@ -63,8 +63,8 @@ def login():
 @app.route('/clientmanagement')
 @login_required
 def queuemanagement():
-    """Manager view of the clients; allows you to remove clients"""
-    return render_template('clientmanagement.html')
+    """Manager view of the clients; allows you to remove clients, requires login"""
+    return render_template('clientmanagement.html', clients = get_client_db())
 
 
 

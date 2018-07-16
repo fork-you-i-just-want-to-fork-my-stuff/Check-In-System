@@ -7,7 +7,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-    body,h1,h2,h3,h4,h5,h6 {color: #141414; font-family: monospace;}
+    body,h1,h2,h3,h4,h5 {color: #141414; font-family: monospace;}
+    
+    h6{color: #f0f0f0; font-family: monospace; text-align: center}
     
     h1,h2{text-decoration: underline;}
     
@@ -48,7 +50,10 @@
     background-attachment: scroll;
     }
     }
-
+        
+        #myNavbar{
+            background-color: #141414;
+        }
     #site-footer {
     height: 50px;
     background: #141414;
@@ -67,6 +72,8 @@
     <a href="/check-in" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Check-in</a>
     <a href="/search" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Search</a>
     </div>
+        </div>
+    <br/>
 
     <!-- Navbar on small screens -->
     <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
@@ -79,12 +86,13 @@
 
     <div class="container">
         {% block content %}
-        {% endblock %}
+    
+    
     </div>
-
+    </body>
     <br/>
 
-    <!-- Footer -->
-    <footer id="site-footer">
-    </footer>
-</html>
+
+        
+    <br/>    
+    {% endblock %}
