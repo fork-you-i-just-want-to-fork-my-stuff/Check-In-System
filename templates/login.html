@@ -8,6 +8,8 @@
         {% if error %}
             <p class=error><strong>Error:</strong> {{ error }}
         {% endif %}
+        
+        <!-- Login form -->
         <br/>
             <form action="" method=post>
                 <dl>
@@ -19,7 +21,15 @@
                 </dl>
                 <p><input type=submit value=Login>
             </form>
-            
+        
+        <!--Print flashed messages here; in this case if you're redirected after logging out-->
+        <br/>
+            {% for message in get_flashed_messages() %}
+        <div class=flash>
+        {{ message }}
+        </div>
+        {% endfor %}
+        
         <br/>
             <p>click <a href="/check-in">here</a> to go to the check-in page</p>
         <br/>
