@@ -34,11 +34,6 @@ def check_in():
     """Routing to client check in page"""
     return render_template('check-in.html')
 
-@app.route('/queue')
-def queue():
-    """Routing to client view of the current client queue"""
-    return render_template('queue.html', queue=get_queue_db())
-
 @app.route('/logout')
 def logout():
     """Function to reset user session 'logs user out'"""
@@ -65,11 +60,11 @@ def login():
     #first time viewing or refresh on failed login
     return render_template('login.html', error = error)
 
-@app.route('/queuemanagement')
+@app.route('/clientmanagement')
 @login_required
 def queuemanagement():
-    """Manager view of the client queue; has access to remove clients from queue"""
-    return render_template('queuemanagement.html')
+    """Manager view of the clients; allows you to remove clients"""
+    return render_template('clientmanagement.html')
 
 
 
