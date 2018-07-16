@@ -6,12 +6,21 @@
     <div class="jumbo">
         <h2>QUEUE</h2>
         <br/>
-            <ol>*Keep in mind waittimes are approximated
-                <li>James         Wait time: 2 min</li>
-                <li>Dianne        Wait time: 4 min</li>
-                <li>Mark          Wait time: 10 min</li>
-                <li>Linda         Wait time: 15 min</li>
-            </ol>
+        <!-- Table for Queue-->
+        <table style="width:200px">
+          <tr>
+            <th>Name</th>
+            <th>Position in line</th> 
+            
+          </tr>
+          {% for client in queue %}    
+          <tr>
+            <td>{{client.client_name}}</td>
+            <td>{{client.line_location}}</td>
+          </tr>
+        {% endfor %}
+        </table>
+
         <br/>
             <p>click <a href="/check-in">here</a> to go to the check-in page</p>
         <br/>
