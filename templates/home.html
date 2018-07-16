@@ -1,76 +1,22 @@
-<!DOCTYPE html>
-<html>
-<title>Home</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
-body, html {
-    height: 100%;
-    color: #777;
-    line-height: 1.8;
-}
-    
-#site-footer {
-height: 50px;
-background: #141414;
-}
+{% extends "template.html" %}
+{% block content %}
 
-/* Create a Parallax Effect */
-.bgimg-1, .bgimg-2, .bgimg-3 {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-/* First image (Logo. Full height) */
-.bgimg-1 {
-    background-image: url('/w3images/parallax1.jpg');
-    min-height: 100%;
-}
-
-.w3-wide {letter-spacing: 10px;}
-.w3-hover-opacity {cursor: pointer;}
-
-/* Turn off parallax scrolling for tablets and phones */
-@media only screen and (max-device-width: 1024px) {
-    .bgimg-1, .bgimg-2, .bgimg-3 {
-        background-attachment: scroll;
-    }
-}
-    
-        #site-footer {
-            height: 50px;
-            background: #141414;
-            }    
-</style>
-<body>
-
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar" id="myNavbar">
-    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
-      <i class="fa fa-bars"></i>
-    </a>
-    <a href="/" class="w3-bar-item w3-button">Home</a>
-    <a href="/login" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Login</a>
-    <a href="/check-in" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> Check-in</a>
-    <a href="/search" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> Search</a>
-    </a>
-  </div>
-
-  <!-- Navbar on small screens -->
-  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
-    <a href="/login" class="w3-bar-item w3-button"><i class="toggleFunction()"></i> Login</a>  
-    <a href="/home" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
-    <a href="/check-in" class="w3-bar-item w3-button" onclick="toggleFunction()">Check-in</a>
-    <a href="/search" class="w3-bar-item w3-button">Search</a>
-  </div>
-</div>
+<!-- The breaks are for spacing the first parralax image class properly-->
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 <!-- First Parallax Image with Logo Text -->
 <div class="bgimg-1 w3-display-container w3-opacity-min" id="home">
@@ -78,8 +24,6 @@ background: #141414;
     <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">SHOP <span class="w3-hide-small">NAME</span> HERE</span>
   </div>
 </div>
-
-
 
 <!-- Modal for full size images on click-->
 <div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
@@ -90,10 +34,19 @@ background: #141414;
   </div>
 </div>
 
-<!-- Footer -->
-<footer id="site-footer">
-</footer>
- 
-
-</body>
-</html>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+{% endblock %}
