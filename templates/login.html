@@ -1,0 +1,28 @@
+{% extends "template.html" %}
+{% block content %}
+<style>
+    h2{font-family: monospace; font-size: 50px;}
+</style>
+    <div class="jumbo">
+        <h2>Login</h2>
+        {% if error %}
+            <p class=error><strong>Error:</strong> {{ error }}
+        {% endif %}
+        <br/>
+            <form action="" method=post>
+                <dl>
+                <dt>Username:
+                <dd><input type=text name=username value ="{{ 
+				request.form.username }}">
+                <dt>Password:
+                <dd><input type=password name=password>
+                </dl>
+                <p><input type=submit value=Login>
+            </form>
+            
+        <br/>
+            <p>click <a href="/check-in">here</a> to go to the check-in page</p>
+        <br/>
+            <p>click <a href="/search">here</a> to go to the search user page</p>
+    </div>
+{% endblock %}
