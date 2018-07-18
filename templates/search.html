@@ -1,21 +1,30 @@
 {% extends "template.html" %}
 {% block content %}
-<style>
-    h2{font-family: monospace; font-size: 50px;}
-</style>
     <div class="jumbo">
-        <h2>Search</h2>
+    <h2>Search Client</h2>
+        <form class="form-horizontal">
+            <fieldset>
+                <!-- Text input-->
+                <div class="form-group">
+                  <label class="col-md-4 control-label" for="Name"></label>  
+                  <div class="col-md-4">
+                  <input id="Name" name="Name" type="text" placeholder="i.e. jane Doe" class="form-control input-md">
+                      <br/>
+                  <span class="help-block">Enter client name and hit enter to search</span>  
+                  </div>
+                </div>
+            <input type="submit" value="Submit">
+            </fieldset>
             <br/>
-        <h4>Enter Credentials below</h4>
-            <div>
-        
+            
+            </form>
+                <h4>Results</h4>
                 <!-- Where all of the search information would go-->
                 {% for client in clients %} 
-                <p>Name: {{ client.client_name }}  Haircut preference: {{ client.haircut_pref }}</p>
+                <p>Name: {{ client.client_first_name }}, {{ client.client_last_name }} <br/>Phone number: {{ client.phone_number }}  <br/>Postal Code: {{ client.postal_code }} <br/>Email: {{ client.email }}</p>
 
                 {% endfor %}
-            </div>
+
         <br/>
-        <p>click <a href="/">here</a> to go to the home page</p>
-    </div>
+        </div>
 {% endblock %}

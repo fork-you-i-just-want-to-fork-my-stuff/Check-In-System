@@ -25,19 +25,16 @@ def home():
     return render_template('home.html')
 
 @app.route('/search')
+@login_required
 def search_user():
     """Routing to a page where you can search users"""
     return render_template('search.html', clients = get_client_db())
 
 @app.route('/check-in')
+@login_required
 def check_in():
     """Routing to client check in page"""
     return render_template('check-in.html')
-
-@app.route('/queue')
-def queue():
-    """Routing to client view of the current client queue"""
-    return render_template('queue.html', queue=get_queue_db())
 
 @app.route('/logout')
 def logout():
@@ -54,25 +51,27 @@ def login():
         # TODO: Tie this to an admin database so that users and passwords can be managed properly
 
         # NOTE: Change the 'admin' credentials here; this is user login validation
-        if request.form['username'] != 'admin' or request.form['password'] != 'admin':
-            error = 'Invalid credentials. Please try again'
-
-        #if login succeeds
-        else:
+        if request.form['username'] == 'admin' or request.form['password'] == 'admin':
             session['logged_in'] = True
             return redirect(url_for('queuemanagement'))
+        if request.form['username'] == 'employee' or request.form['password'] == 'employee':
+            session['logged_in'] = True
+        #if login succeeds
+        else:
+            error = 'Invalid credentials. Please try again'
+
 
     #first time viewing or refresh on failed login
     return render_template('login.html', error = error)
 
-@app.route('/queuemanagement')
+@app.route('/clientmanagement')
 @login_required
 def queuemanagement():
-    """Manager view of the client queue; has access to remove clients from queue"""
-    return render_template('queuemanagement.html')
+    """Manager view of the clients; allows you to remove clients, requires login"""
+    return render_template('clientmanagement.html', clients = get_client_db())
 
 
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(host='0.0.0.0')
