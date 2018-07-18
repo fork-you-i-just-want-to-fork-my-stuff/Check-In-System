@@ -4,7 +4,9 @@
 <p><a href='/logout'>Logout</a></p>
 <br/>
 {% for client in clients %}
-<p>Name: {{ client.client_first_name }}, {{ client.client_last_name }} <br/>Phone number: {{ client.phone_number }}  <br/>Postal Code: {{ client.postal_code }} <br/>Email: {{ client.email }} <h4> Remove User</h4></p>
+<p>Name: {{ client.client_first_name }}, {{ client.client_last_name }} <br/>Phone number: {{ client.phone_number }}  <br/>Postal Code: {{ client.postal_code }} <br/>Email: {{ client.email }}</p>
+<div><input type="submit" value="Remove user">
+<input type="submit" value="Edit user"></div>
 <br/>
 {% endfor %}
 <br/>
