@@ -19,7 +19,7 @@
                 <h4>Results</h4>
                 <!-- Where all of the search information would go-->
                 {% for client in clients %} 
-                <p>Name: {{ client.client_name }}  <br/>Phone number: {{ client.phone_number }}  <br/>Postal Code: {{ client.postal_code }} <br/>Email: {{ client.email }}</p>
+                <p>Name: {{ client.client_first_name }}, {{ client.client_last_name }} <br/>Phone number: {{ client.phone_number }}  <br/>Postal Code: {{ client.postal_code }} <br/>Email: {{ client.email }}</p>
 
                 {% endfor %}
 
