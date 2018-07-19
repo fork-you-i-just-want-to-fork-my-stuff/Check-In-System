@@ -1,5 +1,17 @@
 import sqlite3 as lite
 import sys
+from passlib.hash import pbkdf2_sha512 as hashing_algorithm
+
+def salt_and_hash(password):
+    """Salts and hashes passwords using sha 512"""
+    saltyhash = hashing_algorithm.hash(password)
+    return saltyhash
+
+def verifypw(user_input, hashed_password):
+    """Returns true if user input is the same hash as the
+    stored hash"""
+    return hashing_algorithm.verify(user_input,hashed_password)
+
 
 def get_client_db(user = None):
     #if you want the whole database returned
@@ -17,6 +29,7 @@ def get_client_db(user = None):
 
 if __name__ == "__main__":
     # Creating test data for client db
+
     clients = (
         ("James","McTavish", "(403)123-1234", "T2Z 3l9", "bazinga@gmail.com"),
         ("Dianne", "Lawsorman", "(403)692-1234", "T2Z 5l9", "ww@gmail.com"),
