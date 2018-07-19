@@ -1,10 +1,10 @@
 import sqlite3 as lite
 import sys
-from passlib.hash import sha512_crypt as sha512
+from passlib.hash import pbkdf2_sha512 as hashing_algorithm
 
 def salt_and_hash(password):
     """Salts and hashes passwords using sha 512"""
-    saltyhash = sha512.hash(password)
+    saltyhash = hashing_algorithm.hash(password)
     return saltyhash
 
 def get_client_db(user = None):
@@ -23,7 +23,7 @@ def get_client_db(user = None):
 
 if __name__ == "__main__":
     # Creating test data for client db
-    salt_and_hash("hello")
+    
     clients = (
         ("James","McTavish", "(403)123-1234", "T2Z 3l9", "bazinga@gmail.com"),
         ("Dianne", "Lawsorman", "(403)692-1234", "T2Z 5l9", "ww@gmail.com"),
